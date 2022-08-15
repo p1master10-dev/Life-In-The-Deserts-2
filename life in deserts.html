@@ -1,0 +1,153 @@
+<html>
+   <head>
+      <title>Life In The Deserts</title>
+      <style>
+         h1{
+            top:0;
+            margin:0;
+            background: burlywood;
+            padding:10px;
+         }
+         
+         body{
+            margin:0;
+            background: rgb(167, 138, 100);
+            font-family: Mukta;
+         }
+         
+         #defination{
+            font-weight: bold;
+         }
+         
+         #def-title{
+            font-weight: bolder;
+            font-size: 25px;
+         }
+         
+         #def-box{
+            background-color: burlywood;
+            width: 400px;
+            padding: 6px 20px;
+            border-radius: 10px;
+            margin: 20px;
+         }
+         
+         hr{
+            border: 1px solid rgb(167, 138, 100);
+         }
+
+         .type-box{
+            background: rgb(246, 204, 149);
+            border-radius: 10px;
+            margin: 0px 10px;
+            display: inline-block;
+            height: fit-content;
+            padding: 0px 20px;
+            margin-bottom: 10px;
+         }
+         
+         #types{
+            background-color: burlywood;
+            width: fit-content;
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin: 0px 20px;
+            height: fit-content;
+         }
+         
+         .title-desert-type{
+            font-size: 25px;
+         }
+         
+         .def-class{
+            width: 500px;
+         }
+         
+         .img-{
+            width: fit-content;
+            height: fit-content;
+            margin-bottom: 20px;
+            border: 2px solid rgb(167, 138, 100);
+            border-radius: 10px;
+         }
+         
+         #cold-desert{
+            padding-top: 5px;
+         }
+      </style>
+   </head>
+   <body>
+      <center>
+         <h1>Life In The Deserts</h1>
+         
+         <div id="def-box">
+            <p id="def-title">DEFINATION</p>
+            <hr>
+            <p id="defination">An Arid region characterised by extremely high or extremely low temperature and has scarce vegetation.</p>
+         </div>
+         
+         <div id="types">
+            <h2>Types of Deserts</h2>
+            <div id="hot-desert" class="type-box">
+               <p id="title-h-desert" class="title-desert-type">Hot Deserts</p>
+               <hr>
+               <p id="def-h-desert" class="def-class">The desert climate or arid climate, is a dry climate sub-type in which there is a severe excess of evaporation over
+               precipitation. The typically bald, rocky, or sandy surfaces in desert climates are dry and hold little moisture, quickly
+               evaporating the already little rainfall they receive.</p>
+               <hr>
+               <p class="title-desert-type">Example: Thar</p>
+               <hr>
+               <img src="thar.jpg" class="img-">
+            </div>
+            <div id="cold-desert" class="type-box">
+               <p id="title-c-desert" class="title-desert-type">Cold Deserts</p>
+               <hr>
+               <p id="def-c-desert" class="def-class">These deserts are characterized by cold winters with snowfall and large rainfalls widely during the winter and
+               occasionally over the summer. They occur in areas with extremely high rainfall periods such as the Antarctic and
+               Greenland and also the Nearctic realm.</p>
+               <hr>
+               <p class="title-desert-type">Example: Ladakh</p>
+               <hr>
+               <img src="ladakh.jpg" alt="" class="img-">
+            </div>
+         </div>
+      </center>
+   </body>
+   <script>
+      var window_width = 0;
+      var window_height = 0;
+      
+      setInterval(function() {console.clear()}, 1000)
+      
+      function readWindow () {
+         window_width = window.innerWidth;
+         window_height = window.innerHeight;
+         console.log("Width : " + window_width , "Height : " + window_height);
+         
+         
+         if(window_width < 1204){
+            document.getElementById('cold-desert').style.width = "700px";
+            document.getElementById('hot-desert').style.width = "700px";
+            
+            document.getElementById('def-h-desert').style.fontSize = "17px";
+            document.getElementById('def-c-desert').style.fontSize = "17px";
+            
+            document.getElementById('defination').style.fontSize = "17px";
+         }else{
+            document.getElementById('cold-desert').style.width = 'auto';
+            document.getElementById('hot-desert').style.width = "auto";
+            
+            document.getElementById('def-h-desert').style.fontSize = "16px";
+            document.getElementById('def-c-desert').style.fontSize = "16px";
+            
+            document.getElementById('defination').style.fontSize = "16px";
+         }
+      }
+      
+      setInterval(readWindow , 100);
+      
+      
+   </script>
+</html>
